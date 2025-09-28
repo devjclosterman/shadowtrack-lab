@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  shadowtrack:
+    build:
+      context: ../shadowtrack
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../examples:/app/examples:ro
+    environment:
+      - FLASK_ENV=development
