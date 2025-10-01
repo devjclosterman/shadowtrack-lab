@@ -17,5 +17,4 @@ pip install -r shadowtrack/requirements.txt
 python -m shadowtrack.cli scan --email alice@example.com --images examples/images/ --out report.html
 ```
 
-## Disclaimer
-Run only in environments you control. Educational use only.
+
